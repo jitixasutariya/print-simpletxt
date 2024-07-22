@@ -9,14 +9,12 @@ function Time() {
 
   var greet;
 
-  if (hrs < 12 ? "PM" : "AM") greet = "Good Morning";
-  else if (hrs >= 12 ? "PM" : "AM" && hrs <= 17 ? "PM" : "AM")
-    greet = "Good Afternoon";
-  else if (hrs >= 17 ? "PM" : "AM" && hrs <= 24 ? "PM" : "AM")
-    greet = "Good Evening";
+  if (hrs < 12) greet = "Good Morning";
+  else if (hrs >= 12 && hrs <= 17) greet = "Good Afternoon";
+  else if (hrs >= 17 && hrs <= 24) greet = "Good Evening";
   return (
     <p style={{ color: "red", margin: 20 }} className="heading">
-      Hello! {greet}
+      Hello ! {greet}
     </p>
   );
 }
