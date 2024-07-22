@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Heading from "./Heading";
+import Time from "./Time";
 
 function App() {
+  const currentDate = new Date().toLocaleDateString();
+  const currentTime = new Date().toLocaleTimeString();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <>
+      <Heading></Heading>
+      <Time />
+      <div className="container">
+        <p style={{ color: "blue", fontSize: 25, margin: 30 }}>
+          Today's Date is :- {currentDate}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <p style={{ color: "blue", fontSize: 25, margin: 30 }}>
+          Current Time's :- {currentTime}
+        </p>
+      </div>
+    </>
   );
 }
 
